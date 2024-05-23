@@ -1,0 +1,12 @@
+<p>recipe-list</p>
+<ul>
+  @for (recipe of recipes; track recipe.name){
+    <li    [appAppIsVegetaian]="recipe.isVegetarian"
+
+    (click)="OnSelectRecipe(recipe)">{{recipe.name}}</li>
+    {{recipe.description | shorten : 5}}
+  }
+</ul>
+
+
+
